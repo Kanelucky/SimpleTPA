@@ -25,6 +25,8 @@ cd JavaPluginTemplate
 
 - Rename package name from `org.allaymc.javaplugintemplate` to `your.group.name.and.pluginname`
 - Edit [build.gradle.kts](build.gradle.kts) and [settings.gradle.kts](settings.gradle.kts)
+- Update API version in [build.gradle.kts](build.gradle.kts) to the latest version (see TODO).
+  You can find the latest version here: https://central.sonatype.com/artifact/org.allaymc.allay/api
 - Edit [plugin.json](src/main/resources/plugin.json)
 - Reload gradle
    

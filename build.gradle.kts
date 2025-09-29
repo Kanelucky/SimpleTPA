@@ -17,14 +17,14 @@ java {
 
 repositories {
     mavenCentral()
-    maven("https://jitpack.io/")
     maven("https://repo.opencollab.dev/maven-releases/")
     maven("https://repo.opencollab.dev/maven-snapshots/")
     maven("https://storehouse.okaeri.eu/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly(group = "org.allaymc.allay", name = "api", version = "master-SNAPSHOT")
+    // TODO: Remember to update the version of api to the latest
+    compileOnly(group = "org.allaymc.allay", name = "api", version = "0.12.0")
     compileOnly(group = "org.projectlombok", name = "lombok", version = "1.18.34")
 
     annotationProcessor(group = "org.projectlombok", name = "lombok", version = "1.18.34")
