@@ -17,8 +17,6 @@ java {
 
 repositories {
     mavenCentral()
-    maven("https://repo.opencollab.dev/maven-releases/")
-    maven("https://repo.opencollab.dev/maven-snapshots/")
     maven("https://storehouse.okaeri.eu/repository/maven-public/")
 }
 
