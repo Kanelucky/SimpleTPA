@@ -5,7 +5,9 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "org.allaymc.javaplugintemplate"
+// TODO: Update the group to yours
+group = "org.allaymc"
+// TODO: Update the description to yours
 description = "Java plugin template for allay server"
 version = "0.1.0"
 
@@ -20,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    // TODO: Remember to update the version of api to the latest
+    // TODO: Update the version of api to the latest
     compileOnly(group = "org.allaymc.allay", name = "api", version = "0.12.0")
     compileOnly(group = "org.projectlombok", name = "lombok", version = "1.18.34")
 
