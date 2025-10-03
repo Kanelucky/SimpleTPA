@@ -32,22 +32,3 @@ dependencies {
 tasks.shadowJar {
     archiveFileName = "${project.name}-${version}-shaded.jar"
 }
-
-tasks.register<JavaExec>("runServer") {
-    outputs.upToDateWhen { false }
-    dependsOn("shadowJar")
-
-    val shadowJar = tasks.named("shadowJar", ShadowJar::class).get()
-    val pluginJar = shadowJar.archiveFile.get().asFile
-    val cwd = layout.buildDirectory.file("run").get().asFile
-    val pluginsDir = cwd.resolve("plugins").apply { mkdirs() }
-    doFirst { pluginJar.copyTo(File(pluginsDir, pluginJar.name), overwrite = true) }
-
-    val group = "org.allaymc.allay"
-    val allays = configurations.compileOnly.get().dependencies.filter { it.group == group }
-    val dependency = allays.find { it.name == "server" } ?: allays.find { it.name == "api" }!!
-    val server = dependencies.create("$group:server:${dependency.version}")
-    classpath = files(configurations.detachedConfiguration(server).resolve())
-    mainClass = "org.allaymc.server.Allay"
-    workingDir = cwd
-}
