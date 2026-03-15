@@ -19,6 +19,9 @@ allay {
 
     plugin {
         entrance = "org.kanelucky.simpletpa.SimpleTPA"
+        name = "SimpleTPA"
+        version = "0.1.0"
+        description = "A lightweight and simple tpa plugin for AllayMC"
         authors += "Kanelucky"
         website = "https://github.com/Kanelucky/SimpleTPA"
     }
