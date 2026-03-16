@@ -3,7 +3,6 @@ package org.kanelucky.simpletpa;
 import org.allaymc.api.plugin.Plugin;
 import org.allaymc.api.registry.Registries;
 import org.allaymc.api.utils.TextFormat;
-import org.allaymc.api.utils.config.Config;
 import org.allaymc.api.utils.config.ConfigSection;
 
 import org.kanelucky.simpletpa.commands.*;
@@ -27,6 +26,7 @@ public class SimpleTPA extends Plugin {
         Registries.COMMANDS.register(new TPAblockCommand(tpaManager));
         Registries.COMMANDS.register(new TPAhereCommand(tpaManager));
         Registries.COMMANDS.register(new TPAunlockCommand(tpaManager));
+        Registries.COMMANDS.register(new TPAhelpCommand(tpaManager));
         Registries.COMMANDS.register(new TPAreloadCommand());
         this.pluginLogger.info(TextFormat.GREEN + "Enabled successfully!");
     }

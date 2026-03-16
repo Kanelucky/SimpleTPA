@@ -25,13 +25,6 @@ public class TPAcommand extends Command {
     @Override
     public void prepareCommandTree(CommandTree tree) {
         tree.getRoot()
-                .key("help")
-                .permission("simpletpa.tpahelp.use")
-                .exec(context -> {
-                    context.getSender().sendMessage(tpaManager.getHelpMessage());
-                    return context.success();
-                })
-                .root()
                 .playerTarget("player")
                 .exec((context, player) -> {
                     List<EntityPlayer> targets = context.getResult(0);
