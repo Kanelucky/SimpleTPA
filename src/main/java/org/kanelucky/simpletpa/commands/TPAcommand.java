@@ -17,7 +17,7 @@ public class TPAcommand extends Command {
     private String requestSent;
 
     public TPAcommand(TPAManager tpaManager) {
-        super("tpa", "Teleport request system", "tpa.use");
+        super("tpa", "Teleport request system", "simpletpa.tpa.use");
         this.tpaManager = tpaManager;
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);
     }
@@ -26,6 +26,7 @@ public class TPAcommand extends Command {
     public void prepareCommandTree(CommandTree tree) {
         tree.getRoot()
                 .key("help")
+                .permission("simpletpa.tpahelp.use")
                 .exec(context -> {
                     context.getSender().sendMessage(tpaManager.getHelpMessage());
                     return context.success();

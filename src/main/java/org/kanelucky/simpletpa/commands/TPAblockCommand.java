@@ -15,7 +15,7 @@ public class TPAblockCommand extends Command {
     private final TPAManager tpaManager;
 
     public TPAblockCommand(TPAManager tpaManager) {
-        super("tpablock", "Block a player", "tpablock.use");
+        super("tpablock", "Block a player", "simpletpa.tpablock.use");
         this.tpaManager = tpaManager;
 
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);

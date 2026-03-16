@@ -11,7 +11,7 @@ public class TPAacceptCommand extends Command {
     private final TPAManager tpaManager;
 
     public TPAacceptCommand(TPAManager tpaManager) {
-        super("tpaaccept", "Accept a teleport request", "tpa.accept");
+        super("tpaaccept", "Accept a teleport request", "simpletpa.tpaaccept.use");
         this.tpaManager = tpaManager;
 
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);

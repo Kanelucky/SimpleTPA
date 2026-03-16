@@ -10,7 +10,7 @@ import static org.kanelucky.simpletpa.SimpleTPAconfig.config;
 public class TPAreloadCommand extends Command {
 
     public TPAreloadCommand() {
-        super("tpareload", "Reload TPA configuration", "tpa.reload");
+        super("tpareload", "Reload TPA configuration", "simpletpa.tpareload.use");
     }
 
     @Override

@@ -13,7 +13,7 @@ public class TPAunlockCommand extends Command {
     private final TPAManager tpaManager;
 
     public TPAunlockCommand(TPAManager tpaManager) {
-        super("tpaunlock", "Unblock a player", "tpaunlock.use");
+        super("tpaunlock", "Unblock a player", "simpletpa.tpaunlock.use");
         this.tpaManager = tpaManager;
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);
     }

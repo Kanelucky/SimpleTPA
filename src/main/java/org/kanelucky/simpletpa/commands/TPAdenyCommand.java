@@ -10,7 +10,7 @@ public class TPAdenyCommand extends Command {
     private final TPAManager tpaManager;
 
     public TPAdenyCommand(TPAManager tpaManager) {
-        super("tpadeny", "Deny a teleport request", "tpa.deny");
+        super("tpadeny", "Deny a teleport request", "simpletpa.tpadeny.use");
         this.tpaManager = tpaManager;
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);
     }

@@ -16,7 +16,7 @@ public class TPAhereCommand extends Command {
     private final TPAManager tpaManager;
 
     public TPAhereCommand(TPAManager tpaManager) {
-        super("tpahere", "Request player to teleport to you", "tpahere.use");
+        super("tpahere", "Request player to teleport to you", "simpletpa.tpahere.use");
         this.tpaManager = tpaManager;
         OpPermissionCalculator.NON_OP_PERMISSIONS.addAll(this.permissions);
     }
